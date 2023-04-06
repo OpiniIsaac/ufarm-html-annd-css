@@ -10,8 +10,9 @@
 </header>
 
 	<form>
-		<label for="name">Name:</label>
-		<input type="text" id="name" name="name" required>
+		<label for="fullName">full Name:</label>
+		<input type="text" id="fullName" fullName="fullName" >
+		<small id="fullNameError"></small>
 
 		<label for="gender">Gender:</label>
 		<select id="gender" name="gender">
@@ -20,21 +21,25 @@
 			<option value="female">Female</option>
 			<option value="other">Other</option>
 		</select>
+<small id="genderError"></small>
 
-		<label for="dob">Date of Birth:</label>
-		<input type="date" id="dob" name="dob" required>
+		<label for="dateOfBirth">Date of Birth:</label>
+		<input type="date" id="dateOfBirth" name="dateOfBirth" >
 
 		<label for="activities">Activities Undertaken:</label>
-		<input type="text" id="activities" name="activities" required>
+		<input type="text" id="activities" name="activities" >
+		<small id="activitiesError"></small>
 
-		<label for="contacts">Contacts:</label>
-		<input type="tel" id="contacts" name="contacts" required>
+		<label for="phoneNumber">Phone Number:</label>
+		<input type="tel" id="phoneNumber" name="phoneNumber" >
 
 		<label for="nin">NIN:</label>
-		<input type="text" id="nin" name="nin" required>
+		<input type="text" id="nin" name="nin" >
+		<small id="ninError"></small>
 
 		<label for="ward">Ward Name:</label>
-		<input type="text" id="ward" name="ward" required>
+		<input type="text" id="ward" name="ward" >
+		<small id="wardError" ></small>
 
 		<input type="submit" value="Submit">
 	</form>

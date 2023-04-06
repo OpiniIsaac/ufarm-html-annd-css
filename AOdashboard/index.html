@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agricultural Officer Dashboard</title>
+	<link rel="stylesheet" href="../styles/AOdashboard/index.css">
+</head>
+<body>
+	
+
+	<div id="sidebar">
+		<div class="sidebar-item " onclick="showPage('FOregistration')">FO Registration</div>
+		<div class="sidebar-item" onclick="showPage('registratedFO')">Registered FO</div>
+		<div class="sidebar-item" onclick="showPage('appiontNewFO')">Appoint New FO</div>
+		<div class="sidebar-item" onclick="showPage('FOauth')">FO Authentication</div>
+	</div>
+
+	<iframe id="page-content" src="FOregistration.html"></iframe>
+
+	<script>
+		function showPage(pageName) {
+			var iframe = document.getElementById("page-content");
+			switch (pageName) {
+				case "FOregistration":
+					iframe.src = "FOregistration.html";
+					break;
+				case "registratedFO":
+					iframe.src = "registratedFO.html";
+					break;
+				case "appiontNewFO":
+					iframe.src = "appiontNewFO.html";
+					break;
+				case "FOauth":
+					iframe.src = "FOauth.html";
+					break;
+			}
+
+		
+		}
+	</script>
+</body>
+</html>

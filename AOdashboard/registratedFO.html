@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registered FO</title>
+	<link rel="stylesheet" href="../styles/AOdashboard/registratedFO.css">
+</head>
+<body>
+
+	<header>
+		<h1>Registered FO</h1>
+
+	</header>
+	
+	<!-- Add your table for displaying FO here -->
+	<table>
+		<thead>
+			<tr>
+				<th>Names</th>
+				<th>Ward</th>
+				<th>Unique FO Number</th>
+				<th>Date of Registration</th>
+				<th>Gender</th>
+				<th>Date of Birth</th>
+				<th>Activities</th>
+				<th>NIN Number</th>
+				<th>Phone Number</th>
+				<th>Directions</th>
+				<th>Type of Residence</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody >
+			<tr >
+				<td>Jane Doe</td>
+				<td>Ward A</td>
+				<td>FO123456</td>
+				<td>2022-01-01</td>
+				<td>Female</td>
+				<td>1990-01-01</td>
+				<td>Vegetable farming</td>
+				<td>1234567890123</td>
+				<td>0712345678</td>
+				<td>123 Main Street</td>
+				<td>Owned</td>
+				<td>
+				<!-- Add your form for updating FO here -->
+<form>
+	<label for="activities">Activities:</label>
+	<input type="text" id="activities" name="activities">
+	<label for="phone">Phone Number:</label>
+	<input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
+	<button type="submit">Update</button>
+</form>
+
+</body>
+</html>
+

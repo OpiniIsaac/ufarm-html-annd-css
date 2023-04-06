@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Dashboard</title>
+	<style>
+        body {
+            display: flex;
+            overflow: hidden;
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        #sidebar {
+            width: 20%;
+            height: 100%;
+            background-color: #f2f2f2;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #page-content {
+            width: 80%;
+            height: 100%;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        .sidebar-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .sidebar-item:hover {
+            background-color: #ddd;
+        }
+
+        .sidebar-item.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Style the iframe */
+        #page-content {
+            border: none;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+	<div id="sidebar">
+		<div class="sidebar-item active" onclick="showPage('urbanFarmerRegistrastion')">urbanFarmerRegistrastion</div>
+		<div class="sidebar-item" onclick="showPage('inspect')">inspect</div>
+		<div class="sidebar-item" onclick="showPage('approve')">Approval Page</div>
+		<div class="sidebar-item" onclick="showPage('bookingAndOrders')">bookingAndOrders</div>
+	</div>
+
+	<iframe id="page-content" src="urbanFarmerRegistrastion.html"></iframe>
+
+	<script>
+		function showPage(pageName) {
+			var iframe = document.getElementById("page-content");
+			switch (pageName) {
+				case "urbanFarmerRegistrastion":
+					iframe.src = "urbanFarmerRegistrastion.html";
+					break;
+				case "inspect":
+					iframe.src = "inspect.html";
+					break;
+				case "approve":
+					iframe.src = "approve.html";
+					break;
+				case "bookingAndOrders":
+					iframe.src = "bookingAndOrders.html";
+					break;
+			}
+
+			// Update active class on sidebar items
+			var sidebarItems = document.getElementsByClassName("sidebar-item");
+			for (var i = 0; i < sidebarItems.length; i++) {
+				if (sidebarItems[i].innerHTML.toLowerCase().indexOf(pageName.toLowerCase()) > -1) {
+					sidebarItems[i].classList.add("active");
+				} else {
+					sidebarItems[i].classList.remove("active");
+				}
+			}
+		}
+	</script>
+</body>
+</html>

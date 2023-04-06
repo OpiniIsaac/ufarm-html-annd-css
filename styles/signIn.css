@@ -1,0 +1,17 @@
+.container{
+   display: flex;
+   justify-content: center;
+  }
+  .signIn{
+    display: flex;
+    flex-direction: column;
+  }
+
+  img{
+    height: 100%;
+  }
+
+  button{
+    margin-top: 0.5rem;
+   
+  }

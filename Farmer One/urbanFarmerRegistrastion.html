@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Urban Farmer Registration</title>
+<link rel="stylesheet" href="../styles/FarmerOne/urban_farmer_registration.css">
+</head>
+<body>
+<header>
+	<h1>Urban Farmer Registration</h1>
+</header>
+
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="gender">Gender:</label>
+		<select id="gender" name="gender">
+			<option value="" disabled selected>Select Gender</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select>
+
+		<label for="dob">Date of Birth:</label>
+		<input type="date" id="dob" name="dob" required>
+
+		<label for="activities">Activities Undertaken:</label>
+		<input type="text" id="activities" name="activities" required>
+
+		<label for="contacts">Contacts:</label>
+		<input type="tel" id="contacts" name="contacts" required>
+
+		<label for="nin">NIN:</label>
+		<input type="text" id="nin" name="nin" required>
+
+		<label for="ward">Ward Name:</label>
+		<input type="text" id="ward" name="ward" required>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

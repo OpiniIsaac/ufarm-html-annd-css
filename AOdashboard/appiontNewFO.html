@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Appoint New FO</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../styles/AOdashboard/FO_appiont.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Appoint New FO</h1>
+    </header>
+    <main>
+      <form  id="appiontForm" name="appiontregister" onsubmit="return appiontValidate();">
+        <!-- <fieldset>
+          <legend>Ward Information</legend>
+          <label for="ward">Ward:</label>
+          <select id="ward" name="ward">
+            <option value="">Select Ward</option>
+            <option value="ward_a">Ward A</option>
+            <option value="ward_b">Ward B</option>
+            <option value="ward_c">Ward C</option>
+          </select>
+        </fieldset> -->
+        <fieldset>
+          <legend>New FO Information</legend>
+          <label for="fullName">fullName:</label>
+          <input type="text" id="fullName" name="fullName" />
+          <small id="fullName"></small>
+
+          <label for="uniqueId">Unique FO Number:</label>
+          <input type="text" id="uniqueId" name="uniqueId" />
+          <small id="uniqueId"></small>
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <small id="genderError"></small>
+
+          <label for="dateOfBirth">Date of Birth:</label>
+          <input type="date" id="dateOfBirth" name="dateOfBirth" />
+          <small id="dateOfBirth"></small>
+
+          <label for="activities">Activities:</label>
+          <textarea id="activities" name="activities"></textarea>
+          <small id="activitiesError"></small>
+
+          <label for="nin">NIN Number:</label>
+          <input type="text" id="nin" name="nin" />
+          <small id="ninError"></small>
+
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="text" id="phoneNumber" name="phoneNumber" />
+          <small id="phoneNumber"></small>
+
+          <label for="directions">Directions:</label>
+          <textarea id="directions" name="directions"></textarea>
+          <small id="directionsError"></small>
+
+          <label for="typeOfResidence">Type of Residence:</label>
+          <select id="typeOfResidence" name="typeOfResidence">
+            <option value="">Select Type of Residence</option>
+            <option value="owned">Owned</option>
+            <option value="rented">Rented</option>
+            <option value="other">Other</option>
+          </select>
+          <small id="typeOfResidence"></small>
+        </fieldset>
+        <button type="submit">Appoint FO</button>
+      </form>
+    </main>
+
+
+	<script src="../js/appiont.js"></script>
+
+  </body>
+</html>

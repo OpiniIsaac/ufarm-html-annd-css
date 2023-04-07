@@ -10,27 +10,36 @@
 		<h1>Create FO Authentication Details</h1>
 	</header>
 	<main>
-		<form>
+		<form id="regForm" name="register" onsubmit="return Validate();">
 			<fieldset>
 				<legend>FO Information</legend>
-				<label for="fo_name">FO Name:</label>
-				<input type="text" id="fo_name" name="fo_name" required>
-				<label for="fo_id">FO ID:</label>
-				<input type="text" id="fo_id" name="fo_id" required>
+				<label for="fullName">Full Name:</label>
+				<input type="text" id="fullName" name="fullName" >
+				<small id="fullNameError"></small>
+				<label for="uniqueId">unique Id:</label>
+				<input type="text" id="uniqueId" name="uniqueId" >
+				<small id="uniqueIdError"></small>
+
 				<label for="ward">Ward:</label>
-				<input type="text" id="ward" name="ward" required>
+				<input type="text" id="ward" name="ward" >
+				<small id="wardError"></small>
 			</fieldset>
 			<fieldset>
 				<legend>Authentication Details</legend>
 				<label for="username">Username:</label>
-				<input type="text" id="username" name="username" required>
+				<input type="text" id="username" name="username" >
+				<small id="usernameError"></small>
 				<label for="password">Password:</label>
-				<input type="password" id="password" name="password" required>
-				<label for="confirm_password">Confirm Password:</label>
-				<input type="password" id="confirm_password" name="confirm_password" required>
+				<input type="password" id="password" name="password" >
+				<small id="passwordError"></small>
+				<label for="confirmPassword">Confirm Password:</label>
+				<input type="password" id="confirmPassword" name="confirmPassword" >
+				<small id="confirmPasswordError"></small>
 			</fieldset>
 			<button type="submit">Create Authentication Details</button>
 		</form>
 	</main>
+
+	<script src="./FOauth.js"></script>
 </body>
 </html>

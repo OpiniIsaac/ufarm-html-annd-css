@@ -14,7 +14,7 @@
       <h1>Appoint New FO</h1>
     </header>
     <main>
-      <form  id="appiontForm" name="appiontregister" onsubmit="return appiontValidate();">
+      <form  id="appiontForm" name="appiontregister" onsubmit="return Validate();">
         <!-- <fieldset>
           <legend>Ward Information</legend>
           <label for="ward">Ward:</label>
@@ -29,11 +29,11 @@
           <legend>New FO Information</legend>
           <label for="fullName">fullName:</label>
           <input type="text" id="fullName" name="fullName" />
-          <small id="fullName"></small>
+          <small id="fullNameError"></small>
 
           <label for="uniqueId">Unique FO Number:</label>
           <input type="text" id="uniqueId" name="uniqueId" />
-          <small id="uniqueId"></small>
+          <small id="uniqueIdError"></small>
 
           <label for="gender">Gender:</label>
           <select id="gender" name="gender">
@@ -72,12 +72,12 @@
           </select>
           <small id="typeOfResidence"></small>
         </fieldset>
-        <button type="submit">Appoint FO</button>
+        <button >Appoint FO</button>
       </form>
     </main>
 
 
-	<script src="../js/appiont.js"></script>
+	<script src="./FOregistraction.js"></script>
 
   </body>
 </html>

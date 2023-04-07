@@ -1,9 +1,3 @@
-fullName.style.border = "1px solid red";
-fullNameError.innerHTML = "Please farmer one name can not be empty";
-fullNameError.style =
-  "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-
-
 const appiontValidate = (event) => {
     let error = 0;
     // pick inputs

@@ -9,9 +9,10 @@
 		<h1>Produce Inspection Page</h1>
 	</header>
 
-	<form>
-		<label for="name">Name:</label>
-		<input type="text" id="name" name="name" required>
+	<form id="regForm" name="register" onsubmit="return Validate();" >
+		<label for="fullName">Full Name:</label>
+		<input type="text" id="fullName" name="fullName" >
+		<small id="fullNameError"></small>
 
 		<label for="gender">Gender:</label>
 		<select id="gender" name="gender">
@@ -20,27 +21,37 @@
 			<option value="other">Other</option>
 		</select>
 
-		<label for="date_of_registration">Date of Registration:</label>
-		<input type="date" id="date_of_registration" name="date_of_registration" required>
-
-		<label for="date_of_birth">Date of Birth:</label>
-		<input type="date" id="date_of_birth" name="date_of_birth" required>
+		<label for="dateOfRegistration">Date of Registration:</label>
+		<input type="date" id="dateOfRegistration" name="dateOfRegistration" >
+<small id="dateOfRegistrationError"></small>
+		<label for="dateOfBirth">Date of Birth:</label>
+		<input type="date" id="dateOfBirth" name="dateOfBirth" >
+		<small id="dateOfBirthError"></small>
 
 		<label for="activities">Activities Undertaken:</label>
 		<textarea id="activities" name="activities" rows="5"></textarea>
+		<small id="activitiesError"></small>
 
-		<label for="contacts">Contacts:</label>
-		<input type="text" id="contacts" name="contacts">
+		<label for="phoneNumber">Contacts:</label>
+		<input type="text" id="phoneNumber" name="phoneNumber">
+		<small id="phoneNumberError"></small>
 
-		<label for="NIN">National Identification Number (NIN):</label>
-		<input type="text" id="NIN" name="NIN">
+		<label for="nin">National Identification Number (NIN):</label>
+		<input type="text" id="nin" name="nin">
+<small id="ninError"></small>
 
 		<label for="ward">Ward Name:</label>
 		<input type="text" id="ward" name="ward">
 
-		<label for="unique_id">Unique ID:</label>
-		<input type="text" id="unique_id" name="unique_id" required>
+		<small id="wardError"></small>
 
-		<input type="submit" value="Submit">
+		<label for="uniqueId">Unique ID:</label>
+		<input type="text" id="uniqueId" name="uniqueId" >
+		<small id="uniqueIdError"></small>
+
+		<button> Submit </button>
 	</form>
+	<script src="../AOdashboard/FOregistraction.js"></script>
+</body>
 
+</html>

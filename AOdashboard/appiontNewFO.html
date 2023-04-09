@@ -1,83 +1,115 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Appoint New FO</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../styles/AOdashboard/FO_appiont.css"
-    />
+    <title>AO Registration Form</title>
+    <link rel="stylesheet" href="../styles/AOdashboard/FO_registration.css" />
   </head>
-
   <body>
     <header>
-      <h1>Appoint New FO</h1>
+      <h1>Appoint New Farmer One</h1>
     </header>
-    <main>
-      <form  id="appiontForm" name="appiontregister" onsubmit="return Validate();">
-        <!-- <fieldset>
-          <legend>Ward Information</legend>
-          <label for="ward">Ward:</label>
-          <select id="ward" name="ward">
-            <option value="">Select Ward</option>
-            <option value="ward_a">Ward A</option>
-            <option value="ward_b">Ward B</option>
-            <option value="ward_c">Ward C</option>
-          </select>
-        </fieldset> -->
-        <fieldset>
-          <legend>New FO Information</legend>
-          <label for="fullName">fullName:</label>
-          <input type="text" id="fullName" name="fullName" />
-          <small id="fullNameError"></small>
 
-          <label for="uniqueId">Unique FO Number:</label>
-          <input type="text" id="uniqueId" name="uniqueId" />
-          <small id="uniqueIdError"></small>
+    <form id="regForm" name="register" onsubmit="return Validate();">
+      <fieldset>
+        <legend><h1>Personal Details</h1></legend>
+        <label for="fullName">Full Name:</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Please enter full name"
+        />
+        <small id="fullNameError"></small>
+        <br />
 
-          <label for="gender">Gender:</label>
-          <select id="gender" name="gender">
-            <option value="">Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-          <small id="genderError"></small>
+        <label for="nin">NIN Number:</label>
+        <input type="text" id="nin" name="nin"  placeholder="please national id nin"/>
+        <small id="ninError"></small>
 
-          <label for="dateOfBirth">Date of Birth:</label>
-          <input type="date" id="dateOfBirth" name="dateOfBirth" />
-          <small id="dateOfBirth"></small>
+        <br />
 
-          <label for="activities">Activities:</label>
-          <textarea id="activities" name="activities"></textarea>
-          <small id="activitiesError"></small>
+        <label for="phoneNumber">Phone Number:</label>
+				<input type="text" id="phoneNumber" name="phoneNumber">
+        <small id="phoneNumberError"></small>
 
-          <label for="nin">NIN Number:</label>
-          <input type="text" id="nin" name="nin" />
-          <small id="ninError"></small>
+        <br>
 
-          <label for="phoneNumber">Phone Number:</label>
-          <input type="text" id="phoneNumber" name="phoneNumber" />
-          <small id="phoneNumber"></small>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+        <small id="genderError"></small>
 
-          <label for="directions">Directions:</label>
-          <textarea id="directions" name="directions"></textarea>
-          <small id="directionsError"></small>
+        <br />
 
-          <label for="typeOfResidence">Type of Residence:</label>
-          <select id="typeOfResidence" name="typeOfResidence">
-            <option value="">Select Type of Residence</option>
-            <option value="owned">Owned</option>
-            <option value="rented">Rented</option>
-            <option value="other">Other</option>
-          </select>
-          <small id="typeOfResidence"></small>
-        </fieldset>
-        <button >Appoint FO</button>
-      </form>
-    </main>
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" />
+        <small id="dateOfBirthError"></small>
+        <br />
+
+        <label for="residenceType">Residence Type:</label>
+        <select id="residenceType" name="residenceType">
+          <option value="">--Select--</option>
+          <option value="Own">Own</option>
+          <option value="Rent">Rent</option>
+          <option value="Other">Other</option>
+        </select>
+        <small id="residenceTypeError"></small>
+        
+        <br />
+      </fieldset>
+      <fieldset>
+        <legend><h1>Farm Details</h1></legend>
+
+        <label for="ward">Ward Represented:</label>
+        <input
+        type="text"
+        id="ward"
+        name="ward"
+        placeholder="Please enter ward name"
+      />
+      <small id="wardError"></small>
+
+      <br />
 
 
-	<script src="./FOregistraction.js"></script>
+      <label for="uniqueId">Unique FO Number:</label>
+      <input type="text" id="uniqueId" name="uniqueId" placeholder="Eg FO-000" />
+      <small id="uniqueIdError"></small>
+      
 
+        <br />
+
+       
+        <label for="activities">Activities Involved:</label>
+        <textarea id="activities" name="activities" placeholder="enter activities"></textarea>
+        <small id="activitiesError"></small>
+
+        <br />
+
+        <label for="directions">Directions to Home:</label>
+        <textarea id="directions" name="directions" placeholder="enter direction to farm"></textarea>
+        <small id="directionsError"></small>
+
+        <br />
+        <label for="dateOfRegistration">Date of Registration:</label>
+
+        <input type="date" id="dateOfRegistration" name="dateOfRegistration" />
+        <small id="dateOfRegistrationError"></small>
+
+        <br />
+
+        <label for="periodOfStay">Period of Stay in Ward (in years):</label>
+        <input type="number" id="periodOfStay" name="periodOfStay" placeholder="years stayed in ward" />
+        <small id="periodOfStayError"></small>
+
+        <br />
+      </fieldset>
+
+      <button>Submit</button>
+    </form>
+    <!-- <script src="./regFormValidation.js"></script> -->
+    <script src="./FOregistraction.js"></script>
   </body>
 </html>

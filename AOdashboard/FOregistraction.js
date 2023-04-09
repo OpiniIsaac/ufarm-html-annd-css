@@ -3,6 +3,7 @@ const Validate = (event) => {
   // pick inputs
   let fullName = document.getElementById("fullName");
   let nin = document.getElementById("nin");
+  let phoneNumber = document.getElementById("phoneNumber");
   let female = document.getElementById("female");
   let male = document.getElementById("male");
 
@@ -21,6 +22,7 @@ const Validate = (event) => {
   // pick error sections
   let fullNameError = document.getElementById("fullNameError");
   let ninError = document.getElementById("ninError");
+  let phoneNumberError = document.getElementById("phoneNumberError");
 
   let genderError = document.getElementById("genderError");
   let dateOfBirthError = document.getElementById("dateOfBirthError");
@@ -40,7 +42,7 @@ const Validate = (event) => {
   // validating first name input emptiness
   if (fullName.value == "") {
     fullName.style.border = "1px solid red";
-    fullNameError.innerHTML = "Please farmer one name can not be empty";
+    fullNameError.innerHTML = "Please full name can not be empty";
     fullNameError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
@@ -50,7 +52,7 @@ const Validate = (event) => {
   else if (fullName.value.length < 5) {
     fullName.style.border = "1px solid red";
     fullNameError.innerHTML =
-      "Please the farmer one name must be atleast 3 letters";
+      "Please full name must be atleast 5 letters";
     fullNameError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
@@ -60,7 +62,7 @@ const Validate = (event) => {
   else if (fullName.value.length > 50) {
     fullName.style.border = "1px solid red";
     fullNameError.innerHTML =
-      "Please the farmer one  name must be less than 11 letters";
+      "Please full  name must be less than 50 letters";
     fullNameError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
@@ -73,8 +75,8 @@ const Validate = (event) => {
   // validating nin input
   if (nin.value == "") {
     nin.style.border = "1px solid red";
-    fullNameError.innerHTML = "Please farmer one nin can not be empty";
-    fullNameError.style =
+    ninError.innerHTML = "Please nin can not be empty";
+    ninError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
     return false;
@@ -82,7 +84,7 @@ const Validate = (event) => {
   // validating first name for minimum length
   else if (nin.value.length < 5) {
     nin.style.border = "1px solid red";
-    ninError.innerHTML = "Please the farmer one nin must be atleast 3 letters";
+    ninError.innerHTML = "Please nin must be atleast 3 letters";
     ninError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
@@ -92,7 +94,7 @@ const Validate = (event) => {
   else if (nin.value.length > 50) {
     nin.style.border = "1px solid red";
     ninError.innerHTML =
-      "Please the farmer one  nin must be less than 11 letters";
+      "Please nin must be less than 50 letters";
     ninError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
@@ -101,6 +103,10 @@ const Validate = (event) => {
     nin.style.border = "1px solid green";
     ninError.innerHTML = "";
   }
+  //validation for phone number
+
+
+
   // gender validations
   if (female.checked == false && male.checked == false) {
     genderError.textContent = "Please select gender";
@@ -121,7 +127,7 @@ const Validate = (event) => {
     dateOfBirthError.textContent = "";
   }
   if (residenceType.value == "") {
-    residenceTypeError.textContent = "please enter tyoe of residence";
+    residenceTypeError.textContent = "please enter type of residence";
     residenceTypeError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     return false;
@@ -160,24 +166,25 @@ const Validate = (event) => {
     wardError.innerHTML = "";
   }
 
-  // const regex = /^FO-([0-9]{3})+$/
+  // unique number validations
+  const unregex = /^AO-([0-9]{3})+$/;
+  const ufregex = /^UF-([0-9]{3})+$/; 
+  const foregex = /^FO-([0-9]{3})+$/
+ if (uniqueId.value == "") {
+   uniqueId.style.border = "1px solid red"
+   uniqueIdError.textContent = "Unique number is required";
+   uniqueIdError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+   return false;
+ }else if(!(uniqueId.value.match(unregex) || uniqueId.value.match(ufregex) || uniqueId.value.match(foregex))){
+   uniqueId.style.border = "1px solid red"
+   uniqueIdError.textContent = "Unique number must follow this formart AO-000";
+   uniqueIdError.style = "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
+   return false;
+ }else {
+   uniqueId.style.border = "1px solid green"
+   uniqueIdError.textContent = "";
+ }
 
-  // if (uniqueId.value === '') {
-  //   uniqueId.style.border = '1px solid red'
-  //   uniqueIdError.textContent = 'Unique number is required'
-  //   uniqueIdError.style = 'color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;'
-  //   error++
-  //   return false
-  // } else if (!uniqueId.value.match(regex)) {
-  //   uniqueId.style.border = '1px solid red'
-  //   uniqueIdError.textContent = 'Unique number must follow this format FO-000'
-  //   uniqueIdError.style = 'color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;'
-  //   error++
-  //   return false
-  // } else {
-  //   uniqueId.style.border = '1px solid green'
-  //   uniqueIdError.textContent = ''
-  // }
 
   if (activities.value == "") {
     activitiesError.textContent = "please enter activities";

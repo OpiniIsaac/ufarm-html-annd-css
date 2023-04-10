@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 const Validate = (event) => {
     let error = 0
 
@@ -163,18 +157,20 @@ if (fullName.value == "") {
     error++;
     return false;
   }
-  else if (confirmPassword.value === password.value){
+  else if (password.value !== confirmPassword.value) {
+    password.style.border = "1px solid red";
     confirmPassword.style.border = "1px solid red";
-    confirmPasswordError.innerHTML = "Please confirmPassword should match password";
-    confirmPasswordError.style =
-      "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
-    error++;
+    passwordError.textContent = "Passwords do not match";
+    confirmPasswordError.textContent = "Passwords do not match";
     return false;
   }
-  else{
-    confirmPassword.style.border = "1px solid green";
-    confirmPasswordError.innerHTML = "";
-  }
+else{
+  // The passwords match
+  password.style.border = "1px solid green";
+  confirmPassword.style.border = "1px solid green";
+  passwordError.textContent = "";
+  confirmPasswordError.textContent = "";
+}
 
 
 

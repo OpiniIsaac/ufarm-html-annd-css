@@ -12,35 +12,42 @@
       <h1>Upload Produce and Products</h1>
       <form>
         <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" class="form-control" id="name" name="name" required>
+          <label for="fullName">Name:</label>
+          <input type="text" class="form-control" id="fullName" name="fullName" >
+          <small id="fullNameError"></small>
         </div>
         <div class="form-group">
-          <label for="ward_name">Ward Name:</label>
-          <input type="text" class="form-control" id="ward_name" name="ward_name" required>
+          <label for="ward">Ward Name:</label>
+          <input type="text" class="form-control" id="ward" name="ward" >
+          <small id="wardError"></small>
         </div>
         <div class="form-group">
           <label for="date">Date:</label>
-          <input type="date" class="form-control" id="date" name="date" required>
+          <input type="date" class="form-control" id="date" name="date" >
+          <small id="date"></small>
         </div>
         <div class="form-group">
-          <label for="unit_price">Unit Price in Ugx:</label>
-          <input type="number" class="form-control" id="unit_price" name="unit_price" required>
+          <label for="unitPrice">Unit Price in Ugx:</label>
+          <input type="number" class="form-control" id="unitPrice" name="unitPrice" >
+          <small id="unitPriceError"></small>
         </div>
         <div class="form-group">
           <label for="quantity">Quantity:</label>
-          <input type="number" class="form-control" id="quantity" name="quantity" required>
+          <input type="number" class="form-control" id="quantity" name="quantity" >
+          <small id="quantityError"></small>
         </div>
         <div class="form-group">
           <label for="payment">Mode of Payment:</label>
-          <select class="form-control" id="payment" name="payment" required>
+          <select class="form-control" id="payment" name="payment" >
             <option value="cash">Cash</option>
             <option value="mobile_money">Mobile Money</option>
+            <small id="paymentError"></small>
           </select>
         </div>
         <div class="form-group">
           <label for="directions">Directions:</label>
-          <textarea class="form-control" id="directions" name="directions" required></textarea>
+          <textarea class="form-control" id="directions" name="directions" ></textarea>
+          <small id="directions"></small>
         </div>
         <div class="form-group">
           <label for="delivery">Mode of Delivery:</label>
@@ -48,15 +55,17 @@
             <option value="pick_up">Pick Up</option>
             <option value="home_delivery">Home Delivery</option>
           </select>
+          <small id="deliveryError"></small>
         </div>
         <div class="form-group">
-          <label for="produce_type">Produce Type:</label>
-          <select class="form-control" id="produce_type" name="produce_type" required>
+          <label for="produceType">Produce Type:</label>
+          <select class="form-control" id="produceType" name="produceType" required>
             <option value="organic">Organic</option>
             <option value="non_organic">Non-Organic</option>
           </select>
+          <small id="produceType"></small>
         </div>
-        <button type="submit" class="btn btn-primary">Upload</button>
+        <button type="submit" class="btn btn-success">Upload</button>
         <button type="reset" class="btn btn-secondary">Reset</button>
       </form>
     </div>

@@ -6,8 +6,20 @@ function generateUniqueNumber() {
       randomNumber = Math.floor(Math.random() * 1000);
       uniqueNumber = "AO-" + randomNumber.toString().padStart(3, "0");
     }
-    return console.log(  uniqueNumber);
+    return uniqueNumber;
   }
   
 
-  generateUniqueNumber()
+// Get a reference to the button element
+const button = document.getElementById('generate-button');
+
+// Add an event listener to the button
+button.addEventListener('click', () => {
+  // Call the function to generate the random number
+  const uniqueNumber = generateUniqueNumber();
+  
+  // Display the random number on the page
+ 
+  document.getElementById("uniqueId").value = uniqueNumber;
+
+});

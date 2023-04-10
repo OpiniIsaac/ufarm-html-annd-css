@@ -138,8 +138,8 @@ const Validate = (event) => {
 
   if (ward.value == "") {
     ward.style.border = "1px solid red";
-    fullNameError.innerHTML = "Please ward name can not be empty";
-    fullNameError.style =
+    wardError.innerHTML = "Please ward name can not be empty";
+    wardError.style =
       "color: red; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
     error++;
     return false;
@@ -228,3 +228,4 @@ const Validate = (event) => {
     event.preventDefault();
   }
 };
+

@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Create Unique IDs</title>
-<link rel="stylesheet" href="../styles/FarmerOne/unique_id.css">
+	<title>Create Urban Farmer Authentication</title>
+	<link rel="stylesheet" href="../styles/AOdashboard/FO_auth.css">
+  
 </head>
 <body>
 	<header>
-		<h1>Create Unique IDs</h1>
+		<h1>Create Urban Farmer Authentication</h1>
 	</header>
+	<main>
+		<form id="regForm" name="register" onsubmit="return Validate();">
+			<fieldset>
+				<legend>FO Information</legend>
+				<label for="fullName">Full Name:</label>
+				<input type="text" id="fullName" name="fullName"
+				placeholder="Enter your full name"
+				>
+				<small id="fullNameError"></small>
+				<label for="uniqueId">unique Id:</label>
+				<input type="text" id="uniqueId" name="uniqueId"				placeholder="Enter your unique Id"
+				>
+				<small id="uniqueIdError"></small>
 
-	<form  id="appiontForm" name="appiontregister" onsubmit="return Validate();" >
-		<label for="fullName">Full Name:</label>
-		<input type="text" id="fullName" name="fullName" >
-		<small id="fullNameError"></small>
+				<label for="ward">Ward:</label>
+				<input type="text" id="ward" name="ward"  				placeholder="Enter your ward"
+				>
+				<small id="wardError"></small>
+			</fieldset>
+			<fieldset>
+				<legend>Authentication Details</legend>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" 				placeholder="Enter your username"
+				>
+				<small id="usernameError"></small>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" 				placeholder="Enter your password"
+				>
+				<small id="passwordError"></small>
+				<label for="confirmPassword">Confirm Password:</label>
+				<input type="password" id="confirmPassword" name="confirmPassword" 				placeholder="Enter confirm password"
+				>
+				<small id="confirmPasswordError"></small>
+			</fieldset>
+			<button type="submit">Create Authentication Details</button>
+		</form>
+	</main>
 
-		<label for="password">Password:</label>
-		<input type="password" id="password" name="password" >
-
-		<label for="unique-id">Unique ID:</label>
-		<input type="text" id="unique-id" name="unique-id" >
-
-		<button type="submit">Submit</button>
-	</form>
-	<script src="../AOdashboard/FOauth.js"></script>
-
-
+	<script src="./FOauth.js"></script>
 </body>
 </html>
